@@ -1,5 +1,5 @@
 # py_royDataService_client
-RoyDataService_Client
+Roy Data Service Client
 ===================================
 Client part is responsible for users to get data from the remote database. 
 
