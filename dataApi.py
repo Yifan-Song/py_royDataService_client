@@ -9,9 +9,10 @@ import pandas as pd
 
 PATH = "http://data.natapp1.cc"
 
-def getFuturesData(futures, start, end, freq, datatype, database='uqer'):
+def getFuturesData(futures, start, end, freq, datatype, token, database='uqer'):
+    '''Get Futures Data'''
     print("Getting Data...")
-    payload = {'futures': futures, 'start' : start, 'end' : end, 'freq' : freq, 'datatype' : datatype, 'database':database}
+    payload = {'futures': futures, 'start' : start, 'end' : end, 'freq' : freq, 'datatype' : datatype, 'database':database, 'token' : token}
     res = requests.get(PATH+"/data", params=payload)
     df = pd.DataFrame(eval(res.text))
     return df
