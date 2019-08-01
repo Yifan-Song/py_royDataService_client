@@ -8,6 +8,7 @@ import requests
 import pandas as pd
 
 PATH = "http://data.natapp1.cc"
+nan="NAN"
 
 def getFuturesData(futures, start, end, freq, datatype, token, database='uqer'):
     '''Get Futures Data'''
